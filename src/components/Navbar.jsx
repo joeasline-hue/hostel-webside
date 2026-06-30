@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-blue-900 text-white flex justify-between items-center px-8 py-2">
+      <div className="bg-blue-900 text-white flex flex-col md:flex-row justify-between items-center px-4 md:px-8 py-2 text-sm">
         <p>info@nationalprofilefactory.com</p>
 
         <p>Download Brochure</p>
@@ -14,11 +14,10 @@ const Navbar = () => {
       </div>
 
       {/* Main Navbar */}
-      <div className="flex justify-between items-center p-4">
-
+      <div className="flex justify-between items-center px-4 md:px-10 py-4 shadow-md bg-white">
         {/* Logo + Company Name */}
         <div className="flex items-center gap-3">
-          <img src={logo} alt="Logo" className="w-16" />
+          <img src={logo} alt="Logo" className="w-14 md:w-16 object-contain" />
 
           <h1 className="text-2xl font-bold text-blue-900">
             National Profile Factory
@@ -26,20 +25,19 @@ const Navbar = () => {
         </div>
 
         {/* Menu */}
-        <div className="flex gap-6 items-center">
-
+        <div className="flex flex-wrap gap-4 md:gap-6 items-center text-gray-700 font-medium">
           <Link to="/">Home</Link>
 
           <Link to="/About">About</Link>
 
           {/* Products Dropdown */}
-          <div className="relative group">
+          <div className="relative group cursor-pointer">
 
             <Link to="/Products">
               Products
             </Link>
 
-            <div className="absolute hidden group-hover:block bg-white shadow-lg w-72 mt-2 z-50">
+            <div className="absolute hidden group-hover:block bg-white shadow-xl w-72 mt-2 z-50 rounded-md overflow-hidden">
 
               <Link
                 to="/products/false-ceiling-suspension-system"
