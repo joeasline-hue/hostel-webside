@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-blue-900 text-white flex flex-col md:flex-row justify-between items-center px-4 md:px-8 py-2 text-sm">
+      <div className="bg-blue-900 text-white flex flex-col md:flex-row justify-between items-center px-4 md:px-8 py-2 gap-2">
         <p>info@nationalprofilefactory.com</p>
 
         <p>Download Brochure</p>
@@ -17,15 +17,15 @@ const Navbar = () => {
       <div className="flex justify-between items-center px-4 md:px-10 py-4 shadow-md bg-white">
         {/* Logo + Company Name */}
         <div className="flex items-center gap-3">
-          <img src={logo} alt="Logo" className="w-14 md:w-16 object-contain" />
+          <img src={logo} alt="Logo" className="w-12 md:w-16 object-contain" />
 
-          <h1 className="text-2xl font-bold text-blue-900">
+          <h1 className="text-ig md:2xl font-bold text-blue-900">
             National Profile Factory
           </h1>
         </div>
 
         {/* Menu */}
-        <div className="flex flex-wrap gap-4 md:gap-6 items-center text-gray-700 font-medium">
+        <div className="hidden md:flex gap-6 items-center">
           <Link to="/">Home</Link>
 
           <Link to="/About">About</Link>
