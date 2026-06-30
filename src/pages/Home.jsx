@@ -1,6 +1,6 @@
 import Hero from "../components/Hero";
 import Goal from "../components/Goal";
-import Products from "../components/ProductS";
+import Products from "../components/Products";
 
 function Home() {
   return (
