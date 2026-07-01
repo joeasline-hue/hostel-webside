@@ -28,6 +28,7 @@ const Products = () => {
       <Swiper
         modules={[Navigation, Autoplay]}
         navigation
+        auroHeight={true}
         autoplay={{
           delay: 3000,
           disableOnInteraction: false,
@@ -49,20 +50,20 @@ const Products = () => {
         {products.map((product) => (
           <SwiperSlide key={product.slug}>
             <Link to={`/products/${product.slug}`}>
-              <div className="shadow-lg rounded-lg p-4 bg-white h-full">
+              <div className="shadow-lg rounded-lg p-4 bg-white min-h-[450px]flex flex-col">
                 <img
                   src={product.image}
                   alt={product.title}
-                  className="w-full h-56 object-contain"
+                  className="w-full h-48 md:h-56 object-contain"
                 />
 
-                <h2 className="text-xl md:text-2xl font-bold text-blue-900 mt-4">
+                <h2 className="text-xl md:text-2xl font-bold text-blue-900 mt-4 line-clamp-2">
                   {product.title}
                 </h2>
 
                 <div className="w-16 h-1 bg-red-600 mt-2 mb-4"></div>
 
-                <p className="text-gray-600 text-sm md:text-base">
+                <p className="text-gray-600 text-sm md:text-base flex-grow">
                   {product.description}
                 </p>
               </div>
